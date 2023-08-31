@@ -7,6 +7,8 @@
 :set expandtab
 :set softtabstop=0
 :set mouse=a
+:set list
+:set listchars=tab:▸·
 
 call plug#begin('~/.config/nvim/plugged')
 
@@ -41,6 +43,9 @@ Plug 'L3MON4D3/LuaSnip'             " Required
 Plug 'rafamadriz/friendly-snippets' " Optional
 " LSP Setup
 Plug 'VonHeikemen/lsp-zero.nvim', {'branch': 'v1.x'}
+Plug 'iamcco/markdown-preview.nvim'
+Plug 'nvim-treesitter/nvim-treesitter'
+Plug 'nvim-treesitter/nvim-treesitter-context'
 
 call plug#end()
 
@@ -81,7 +86,7 @@ EOF
 set termguicolors
 colorscheme catppuccin-frappe
 
-nnoremap <C-f> :NERDTreeFocus<CR>
+
 nnoremap <C-n> :NERDTree<CR>
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
@@ -107,6 +112,4 @@ let g:ale_fix_on_save = 1
 let g:floaterm_wintype = 'split'
 
 let g:airline#extensions#tabline#formatter = 'unique_tail'
-
-
 
